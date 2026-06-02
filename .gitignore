@@ -1,0 +1,17 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Video processing files
+*.mp4
+*.mp3
+*.wav
+_wav/
+output/
+
+# Credentials
+config.yaml
+.env
