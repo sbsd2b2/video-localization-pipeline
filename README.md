@@ -4,25 +4,113 @@
 
 # Video Localization Pipeline
 
-An automated, end-to-end AI workflow designed for video translation, dubbing, and subtitle synchronization. This project aims to help independent content creators and educators bridge language barriers seamlessly.
+An automated pipeline for translating, dubbing, and synchronizing video content into multiple languages using speech recognition, machine translation, and voice synthesis.
 
-## 🌟 Core Features
-* **Speech Recognition**: High-accuracy audio extraction and time-aligning using WhisperX.
-* **LLM Translation**: Advanced multi-language text translation powered by DeepSeek V3 / OpenAI API.
-* **Text-to-Speech (TTS)**: Natural voice synthesis with support for emotional inflection and voice cloning (via edge-tts / GPT-SoVITS).
-* **Audio Re-sync**: Smart audio stretching and timeline alignment to perfectly match the original video pacing.
+---
 
-## 🛠️ Environment & Tech Stack
-* **OS Target**: Windows Subsystem for Linux 2 (WSL2 / Ubuntu)
-* **Language**: Python 3.10+
-* **Core Libraries**: `whisperx`, `openai`, `edge-tts`, `ffmpeg`
+## Why this project exists
 
-## 📅 Roadmap / Next Steps
-- [x] Architecture & Pipeline Flow Design
-- [ ] Requirements Specification & Config Templates
-- [ ] Core ASR (Audio Transcription) Script Integration
-- [ ] OpenAI/DeepSeek API Translation Module
-- [ ] TTS & Audio Fusion Implementation
+Most video translation tools are either manual, fragmented, or require heavy post-processing.
 
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project aims to provide a fully automated pipeline that:
+
+- Extracts audio and speech from videos
+- Performs transcription (ASR)
+- Translates subtitles into target languages
+- Generates natural speech using TTS
+- Re-synchronizes audio with original video timing
+
+---
+
+## Features
+
+- End-to-end video localization pipeline
+- Whisper-based speech recognition support
+- Multi-language translation workflow
+- TTS voice generation (supports multiple engines)
+- Subtitle generation and alignment
+- Modular architecture for easy extension
+
+---
+
+## Pipeline Overview
+
+Video → Audio Extraction → ASR → Translation → TTS → Audio Re-sync → Final Video
+
+---
+
+## Use Cases
+
+- YouTube video translation and dubbing
+- Educational course localization
+- Anime / game fan translation pipelines
+- Multilingual content production for creators
+
+---
+
+## Status
+
+The project is actively maintained and currently supports a fully functional end-to-end pipeline including ASR, translation, TTS, and video reconstruction.
+
+Core features are stable, while optimization is ongoing in voice quality and alignment accuracy.
+
+---
+
+## Roadmap
+
+- Improve voice naturalness and prosody
+- Add real-time streaming support
+- Enhance speaker diarization accuracy
+- Build a lightweight web UI for non-technical users
+
+
+## License
+
+This project is released under the MIT License for research and educational purposes.
+
+
+## Architecture Diagram
+
+Below is a simplified architecture of the system:
+
+```text
+              ┌────────────────────┐
+              │     Input Video    │
+              └─────────┬──────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │  Audio Extraction  │
+              └─────────┬──────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │   Speech-to-Text   │
+              │     (ASR/Whisper)  │
+              └─────────┬──────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │    Translation     │
+              │   (Multi-language) │
+              └─────────┬──────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │  Text-to-Speech    │
+              │       (TTS)        │
+              └─────────┬──────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │ Audio Re-sync      │
+              │ + Video Merge      │
+              └─────────┬──────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │  Final Output      │
+              │  Localized Video   │
+              └────────────────────┘
+
+
