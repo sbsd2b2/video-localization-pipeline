@@ -35,6 +35,36 @@ Video → Audio Extraction → ASR → Translation → TTS → Audio Re-sync →
 
 ---
 
+## Use Cases
+
+- YouTube video translation and dubbing
+- Educational course localization
+- Anime / game fan translation pipelines
+- Multilingual content production for creators
+
+---
+
+## Status
+
+The project is actively maintained and currently supports a fully functional end-to-end pipeline including ASR, translation, TTS, and video reconstruction.
+
+Core features are stable, while optimization is ongoing in voice quality and alignment accuracy.
+
+---
+
+## Roadmap
+
+- Improve voice naturalness and prosody
+- Add real-time streaming support
+- Enhance speaker diarization accuracy
+- Build a lightweight web UI for non-technical users
+
+
+## License
+
+This project is released under the MIT License for research and educational purposes.
+
+
 ## Architecture Diagram
 
 Below is a simplified architecture of the system:
@@ -80,29 +110,3 @@ Below is a simplified architecture of the system:
               └────────────────────┘
 
 
-## Use Cases
-
-- YouTube video translation and dubbing
-- Educational course localization
-- Anime / game fan translation pipelines
-- Multilingual content production for creators
-
-
-## Status
-
-The project is actively maintained and currently supports a fully functional end-to-end pipeline including ASR, translation, TTS, and video reconstruction.
-
-Core features are stable, while optimization is ongoing in voice quality and alignment accuracy.
-
-
-## Roadmap
-
-- Improve voice naturalness and prosody
-- Add real-time streaming support
-- Enhance speaker diarization accuracy
-- Build a lightweight web UI for non-technical users
-
-
-## License
-
-This project is released under the MIT License for research and educational purposes.
